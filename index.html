@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0b0d12" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<title>Frankfurt × Max Korzh — 8–11 ottobre 2026</title>
+<style>
+  :root{--bg:#0b0d12;--panel:#121620;--panel2:#171c28;--text:#f5f7fb;--muted:#aeb7c7;--line:#2a3141;--accent:#d8ff4f;--blue:#7dd3fc;--warn:#ffcf66;--red:#ff7a7a;--green:#7ee0a1}
+  *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(1200px 500px at 50% -150px,#253047 0%,var(--bg) 50%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Arial,sans-serif}
+  a{color:inherit}.app{max-width:980px;margin:0 auto;padding:18px 14px 42px}.top{display:flex;gap:12px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:14px}.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:800}.title{font-size:clamp(28px,6vw,52px);line-height:.96;margin:7px 0 8px;max-width:800px}.sub{color:var(--muted);font-size:14px;max-width:720px;line-height:1.5}.badge{border:1px solid var(--line);background:#0f131b;padding:9px 12px;border-radius:999px;font-size:12px;color:#d8deea;white-space:nowrap}
+  .filters{display:flex;gap:8px;overflow:auto;padding:3px 0 12px;scrollbar-width:none}.filters::-webkit-scrollbar{display:none}.filters button{border:1px solid var(--line);background:#111620;color:#dbe2ee;border-radius:999px;padding:10px 14px;font-weight:700;white-space:nowrap;min-height:42px}.filters button.active{background:var(--accent);color:#10130b;border-color:var(--accent)}
+  .stage{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:24px;background:linear-gradient(180deg,#10151f,#0f131a)}.track{display:flex;transition:transform .38s cubic-bezier(.2,.7,.2,1);touch-action:pan-y}.slide{min-width:100%;padding:0;display:flex;flex-direction:column}.hero{height:250px;position:relative;overflow:hidden;background:linear-gradient(135deg,#1b2638,#18202e)}.hero img{width:100%;height:100%;object-fit:cover;display:block}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(8,10,15,.9) 100%)}.heroText{position:absolute;z-index:2;left:18px;right:18px;bottom:16px}.kicker{font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}.hero h2{font-size:clamp(26px,5vw,43px);margin:4px 0 4px}.hero p{margin:0;color:#e2e7ef;font-size:14px}.emojiHero{display:grid;place-items:center;font-size:82px}.emojiHero:before{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,#31415d,transparent 65%)}.emojiHero span{position:relative;z-index:1}
+  .body{padding:18px}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.chip{font-size:12px;font-weight:800;border:1px solid var(--line);border-radius:999px;padding:7px 10px;color:#dfe5ef;background:#151a24}.chip.good{border-color:#315d43;color:#b9ffd0}.chip.hot{border-color:#67434a;color:#ffbcc4}.chip.blue{border-color:#2c5064;color:#bcecff}.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}.card{background:var(--panel2);border:1px solid var(--line);border-radius:16px;padding:14px}.card h3{margin:0 0 9px;font-size:15px}.card p{margin:0;color:var(--muted);line-height:1.55;font-size:14px}.steps{display:grid;gap:8px}.step{display:grid;grid-template-columns:28px 1fr;gap:9px;align-items:start}.num{width:28px;height:28px;display:grid;place-items:center;border-radius:50%;background:#222a39;color:var(--accent);font-size:12px;font-weight:900}.step b{display:block;font-size:13px;margin-bottom:2px}.step span{color:var(--muted);font-size:13px;line-height:1.35}.alert{border-left:3px solid var(--warn);padding:10px 12px;background:#282316;border-radius:9px;color:#f8e5b8;font-size:13px;line-height:1.45}.alert.red{border-left-color:var(--red);background:#2a191c;color:#ffd1d5}.alert.green{border-left-color:var(--green);background:#17251c;color:#c9f7d8}.mini{font-size:12px;color:var(--muted);line-height:1.45}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.actions a,.actions button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;min-height:42px;padding:9px 13px;border-radius:11px;border:1px solid var(--line);background:#111620;color:#eef2f7;font-weight:800;font-size:13px}.actions a.primary{background:var(--accent);color:#11140b;border-color:var(--accent)}
+  .nav{display:grid;grid-template-columns:48px 1fr 48px;gap:8px;align-items:center;margin-top:12px}.nav button{height:46px;border-radius:14px;border:1px solid var(--line);background:#141923;color:white;font-size:21px}.progressWrap{height:4px;background:#202635;border-radius:99px;overflow:hidden}.progress{height:100%;background:var(--accent);width:10%;transition:width .3s}.counter{text-align:center;color:var(--muted);font-size:12px;margin-top:7px}.dots{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:8px}.dot{width:8px;height:8px;border:0;border-radius:50%;background:#414b5f;padding:0}.dot.active{background:var(--accent);transform:scale(1.25)}
+  .quick{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}.quick button{background:#121720;border:1px solid var(--line);border-radius:14px;color:#e9edf4;min-height:60px;padding:9px;font-size:11px;font-weight:800}.quick button strong{display:block;font-size:18px;margin-bottom:4px}.quick button.active{outline:2px solid var(--accent);outline-offset:0}
+  .footer{margin-top:18px;border-top:1px solid var(--line);padding-top:15px;color:var(--muted);font-size:12px;line-height:1.5}.sources{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}.sources a{border:1px solid var(--line);padding:7px 9px;border-radius:10px;text-decoration:none;background:#10151e}
+  @media(max-width:700px){.grid{grid-template-columns:1fr}.hero{height:220px}.body{padding:15px}.quick{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:380px){.app{padding-left:10px;padding-right:10px}.hero{height:205px}.title{font-size:31px}.badge{white-space:normal}.nav{grid-template-columns:44px 1fr 44px}}
+  @media(prefers-reduced-motion:reduce){.track,.progress{transition:none}}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <div class="top">
+    <div>
+      <div class="eyebrow">Frankfurt · 8–11 ottobre 2026</div>
+      <h1 class="title">Weekend Max Korzh<br>senza perdere Francoforte.</h1>
+      <div class="sub">Base: zona Friedrichstraße, Neu-Isenburg · coordinate 50.0515, 8.6917. Piano costruito per uscire fino a tardi, evitare i punti deboli dei tram durante i lavori e tenere sabato abbastanza leggero prima del concerto.</div>
+    </div>
+    <div class="badge">🎫 Sab 10/10 · ingresso 16:00 · show 19:00</div>
+  </div>
+
+  <div class="filters" aria-label="Filtra le slide">
+    <button class="active" data-filter="all">Tutto</button><button data-filter="gio">Giovedì</button><button data-filter="ven">Venerdì</button><button data-filter="sab">Sabato</button><button data-filter="dom">Domenica</button><button data-filter="mezzi">Mezzi & notte</button>
+  </div>
+
+  <div class="stage" aria-live="polite">
+    <div class="track" id="track">
+
+      <section class="slide" data-day="all" data-label="Piano">
+        <div class="hero emojiHero"><span>🧭</span><div class="heroText"><div class="kicker">Il piano intelligente</div><h2>4 giorni, ma 2 giorni pieni</h2><p>Giovedì arrivo · venerdì sightseeing serio · sabato concerto · domenica rientro.</p></div></div>
+        <div class="body">
+          <div class="chips"><span class="chip good">✓ Goetheturm prioritario</span><span class="chip blue">🌙 rientri notturni previsti</span><span class="chip hot">🔥 sabato folla alta</span></div>
+          <div class="grid">
+            <div class="card"><h3>Programma consigliato</h3><div class="steps">
+              <div class="step"><div class="num">G</div><div><b>Giovedì: centro + skyline</b><span>Römerberg → Eiserner Steg → Main Tower → Sachsenhausen se hai ancora energie.</span></div></div>
+              <div class="step"><div class="num">V</div><div><b>Venerdì: città + Goetheturm + notte</b><span>Zeil/centro, pausa, poi Goetheturm prima del buio. La sera resta fuori senza ansia: c'è il night bus n71 verso Neu-Isenburg.</span></div></div>
+              <div class="step"><div class="num">S</div><div><b>Sabato: concerto</b><span>Mattina tranquilla. Muoviti presto e usa ferrovia/S-Bahn dove possibile. Dopo il concerto puoi andare direttamente in centro invece di tornare a casa.</span></div></div>
+              <div class="step"><div class="num">D</div><div><b>Domenica: recupero + aeroporto</b><span>Solo attività compatibili con l'orario del volo.</span></div></div>
+            </div>
+            <div class="card"><h3>Regola del weekend</h3><p>Non costruire il viaggio intorno alla linea tram 17/21: tra il 5 e il 12 ottobre ci sono lavori a Friedensbrücke e, dal 9 al 12, il servizio è spezzato/modificato. Per gli spostamenti importanti usa RMVgo in tempo reale e preferisci bus 653 / S-Bahn / U-Bahn.</p><div class="alert" style="margin-top:10px">Sabato il Deutsche Bank Park segnala esplicitamente traffico e mezzi molto affollati: esci prima, non puntare all'ultima coincidenza.</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-day="ven" data-label="Goetheturm">
+        <div class="hero"><img alt="Goetheturm con skyline di Francoforte" src="https://www.frankfurt-rhein-main.de/_Resources/Persistent/f0cfc6a237570df545d145151cc68ab726cf8991/1440x960_Destination%E2%80%93Frankfurt-Skyline-Goetheturm-76-640x427.jpg"><div class="heroText"><div class="kicker">Priorità #1 · sopra casa tua</div><h2>Goetheturm</h2><p>43,3 m · 197 gradini · skyline + foresta + Taunus.</p></div></div>
+        <div class="body">
+          <div class="chips"><span class="chip good">★★★★★ per te</span><span class="chip">gratis</span><span class="chip blue">tramonto ven 18:46</span></div>
+          <div class="grid">
+            <div class="card"><h3>Quando andarci</h3><p>Venerdì, puntando ad arrivare <b>tra 17:15 e 17:45</b>. Il sole tramonta circa alle <b>18:46</b>. La torre è aperta in ottobre dalle 08:00 fino al buio, comunque non oltre le 20:00: non arrivare all'ultimo.</p><div class="alert green" style="margin-top:10px">Questa è la vista che cercavi “sopra” casa: il Goetheturm è a nord/nord-est rispetto alla tua base di Neu-Isenburg.</div></div>
+            <div class="card"><h3>Dalla tua casa con i mezzi</h3><div class="steps">
+              <div class="step"><div class="num">1</div><div><b>Friedrichstraße → Frankfurt Südbahnhof</b><span>Bus 653. È la tua linea più utile verso Francoforte sud.</span></div></div>
+              <div class="step"><div class="num">2</div><div><b>Südbahnhof → Goetheturm</b><span>Bus 47/48, circuito Südbahnhof – Dielmannstraße/Goetheturm – Südbahnhof.</span></div></div>
+              <div class="step"><div class="num">3</div><div><b>Ritorno</b><span>47/48 verso Südbahnhof, poi centro oppure 653 verso Neu-Isenburg.</span></div></div>
+            </div></div>
+          </div>
+          <div class="actions"><a class="primary" href="https://www.google.com/maps/search/?api=1&query=Goetheturm+Frankfurt" target="_blank" rel="noopener">Apri su Maps</a><a href="https://frankfurt.de/themen/umwelt-und-gruen/orte/wald/goetheturm" target="_blank" rel="noopener">Sito ufficiale</a></div>
+        </div>
+      </section>
+
+      <section class="slide" data-day="gio" data-label="Römerberg">
+        <div class="hero"><img alt="Römerberg di sera" src="https://www.visitfrankfurt.travel/fileadmin/Mediendatenbank/Sehenswertes_und_Sehenswuerdigkeiten/frankfurt-roemer-roemerberg-abend.jpg"><div class="heroText"><div class="kicker">Giovedì pomeriggio</div><h2>Römerberg + Neue Altstadt</h2><p>La parte “vecchia” di Frankfurt: compatta, facile da fare appena arrivi.</p></div></div>
+        <div class="body"><div class="chips"><span class="chip good">must</span><span class="chip">60–90 min</span><span class="chip blue">perfetto al tramonto</span></div>
+          <div class="grid"><div class="card"><h3>Giro a piedi</h3><div class="steps"><div class="step"><div class="num">1</div><div><b>Römerberg</b><span>Piazza principale e facciate storiche.</span></div></div><div class="step"><div class="num">2</div><div><b>Neue Altstadt + Dom</b><span>5–10 minuti a piedi.</span></div></div><div class="step"><div class="num">3</div><div><b>Verso il Main</b><span>Scendi al fiume e chiudi con Eiserner Steg.</span></div></div></div></div>
+          <div class="card"><h3>Dalla base</h3><p><b>653 → Frankfurt Südbahnhof</b>, poi S/U-Bahn verso il centro oppure prosegui a piedi verso Sachsenhausen e attraversa il Main. Dato che giovedì arrivi alle 13:10, considera questo il primo blocco facile del viaggio.</p><div class="mini" style="margin-top:9px">Se atterri a FRA (Frankfurt Main), X17 e X19 collegano aeroporto e Neu-Isenburg; scegli la fermata indicata da RMVgo più comoda per casa.</div></div></div>
+          <div class="actions"><a class="primary" href="https://www.google.com/maps/search/?api=1&query=Römerberg+Frankfurt" target="_blank" rel="noopener">Apri su Maps</a></div>
+        </div>
+      </section>
+
+      <section class="slide" data-day="gio" data-label="Eiserner Steg">
+        <div class="hero"><img alt="Eiserner Steg al tramonto" src="https://dynl.mktgcdn.com/p/uzibuMrRtmLASDePtGVk1IlehyZ4rai35oUPOw15XME/640x427.jpg"><div class="heroText"><div class="kicker">Giovedì · golden hour</div><h2>Eiserner Steg + Main</h2><p>Il passaggio migliore tra Altstadt e Sachsenhausen.</p></div></div>
+        <div class="body"><div class="chips"><span class="chip good">foto top</span><span class="chip">gratis</span><span class="chip blue">gio tramonto 18:48</span></div>
+          <div class="grid"><div class="card"><h3>Perché inserirlo</h3><p>Non richiede deviazioni: arriva naturalmente dopo Römerberg. Attraversando il ponte ti ritrovi dalla parte di Sachsenhausen, quindi puoi continuare direttamente verso cena e locali.</p></div><div class="card"><h3>Sequenza perfetta</h3><p><b>Römerberg → Eiserner Steg → riva sud del Main → Sachsenhausen.</b> Se vuoi Main Tower nello stesso giorno, falla prima o dopo in base a quanto sei stanco dal viaggio.</p></div></div>
+          <div class="actions"><a class="primary" href="https://www.google.com/maps/search/?api=1&query=Eiserner+Steg+Frankfurt" target="_blank" rel="noopener">Apri su Maps</a></div>
+        </div>
+      </section>
+
+      <section class="slide" data-day="gio" data-label="Main Tower">
+        <div class="hero"><img alt="Skyline notturno di Francoforte" src="https://images.handelsblatt.com/s5Hima3LsNEc/cover/2048/1152/0/0/0/213/0.5/0.5/frankfurter-bankenskyline.jpeg"><div class="heroText"><div class="kicker">Vista urbana</div><h2>MAIN TOWER</h2><p>Terrazza a 187 m: la vista più “New York” del weekend.</p></div></div>
+        <div class="body"><div class="chips"><span class="chip good">★★★★★</span><span class="chip">€9 adulto</span><span class="chip blue">ven/sab fino 23:00</span></div>
+          <div class="grid"><div class="card"><h3>Quando</h3><p>Giovedì sera oppure venerdì dopo cena. In orario estivo è aperto <b>dom–gio 10–21</b> e <b>ven–sab 10–23</b>. Ultima salita 45 minuti prima della chiusura.</p><div class="alert" style="margin-top:10px">Se il meteo è brutto, spostalo: è molto più bello con visibilità pulita.</div></div><div class="card"><h3>Come arrivare</h3><p>Stazione più comoda: <b>Taunusanlage</b> (S-Bahn). Dal centro storico puoi anche andarci a piedi in circa 15–20 minuti passando nel Bankenviertel.</p></div></div>
+          <div class="actions"><a class="primary" href="https://www.google.com/maps/search/?api=1&query=Main+Tower+Frankfurt" target="_blank" rel="noopener">Apri su Maps</a><a href="https://www.maintower.de/en/" target="_blank" rel="noopener">Orari ufficiali</a></div>
+        </div>
+      </section>
+
+      <section class="slide" data-day="ven" data-label="Centro">
+        <div class="hero emojiHero"><span>🏙️</span><div class="heroText"><div class="kicker">Venerdì · giorno</div><h2>Zeil + Kleinmarkthalle + Alte Oper</h2><p>Il blocco urbano da fare prima del Goetheturm.</p></div></div>
+        <div class="body"><div class="chips"><span class="chip">shopping</span><span class="chip">street food</span><span class="chip blue">facile coi mezzi</span></div>
+          <div class="grid"><div class="card"><h3>Ordine pratico</h3><p><b>Konstablerwache → Zeil → Hauptwache → Kleinmarkthalle → Alte Oper.</b> Non serve correre: 3–4 ore con pranzo bastano.</p></div><div class="card"><h3>Trasporto</h3><p>653 fino a Frankfurt Süd; da lì usa S-Bahn verso <b>Hauptwache / Konstablerwache</b>. Per il rientro serale la stessa Konstablerwache è importante perché da lì parte il <b>n71 notturno verso Neu-Isenburg</b>.</p></div></div>
+        </div>
+      </section>
+
+      <section class="slide" data-day="ven" data-label="Sachsenhausen">
+        <div class="hero"><img alt="Vita notturna a Sachsenhausen" src="https://cityrelax.infrankfurtammain.net/data/Images/OriginalPhoto/13342/1334278/1334278568/frankfurt-am-main-city-relax-image-1.JPEG"><div class="heroText"><div class="kicker">Venerdì notte</div><h2>Alt-Sachsenhausen</h2><p>La zona più semplice per mangiare, bere e restare fuori fino a tardi.</p></div></div>
+        <div class="body"><div class="chips"><span class="chip hot">notte</span><span class="chip good">comoda per la tua base</span><span class="chip">Apfelwein</span></div>
+          <div class="grid"><div class="card"><h3>Il vantaggio vero</h3><p>Per te è migliore rispetto a fare tardi nella parte nord della città: sei già sulla direttrice verso Neu-Isenburg. Il night bus <b>n71</b> passa dalla zona <b>Lokalbahnhof / Wendelsplatz</b> prima di proseguire verso Neu-Isenburg.</p><div class="alert green" style="margin-top:10px">Quindi venerdì puoi stare fuori tardi senza dover per forza pagare taxi fino a casa.</div></div><div class="card"><h3>Strategia notte</h3><p>Quando decidi di rientrare, apri RMVgo e cerca <b>n71</b> dalla fermata più vicina (Lokalbahnhof, Wendelsplatz o Konstablerwache). Se l'attesa è lunga, taxi/rideshare è il piano B.</p></div></div>
+          <div class="actions"><a class="primary" href="https://www.google.com/maps/search/?api=1&query=Alt-Sachsenhausen+Frankfurt" target="_blank" rel="noopener">Apri su Maps</a></div>
+        </div>
+      </section>
+
+      <section class="slide" data-day="sab" data-label="Concerto">
+        <div class="hero emojiHero"><span>🔥</span><div class="heroText"><div class="kicker">Sabato 10 ottobre</div><h2>MAX KORZH · Deutsche Bank Park</h2><p>Apertura 16:00 · inizio 19:00 · grande afflusso previsto.</p></div></div>
+        <div class="body"><div class="chips"><span class="chip hot">folla molto alta</span><span class="chip">E1–E5 aperti</span><span class="chip blue">S7 / S8 / S9 → Stadion</span></div>
+          <div class="grid"><div class="card"><h3>Come ci andrei dalla tua casa</h3><div class="steps">
+            <div class="step"><div class="num">1</div><div><b>Parti 14:45–15:15</b><span>Non serve arrivare alle 16 precise, ma devi assorbire ritardi e folla.</span></div></div>
+            <div class="step"><div class="num">2</div><div><b>Verso Neu-Isenburg Bahnhof</b><span>Usa bus locale (OF-91/OF-92/OF-52 secondo la corsa) oppure rideshare breve; verifica RMVgo.</span></div></div>
+            <div class="step"><div class="num">3</div><div><b>S6 → Frankfurt Hbf</b><span>Da Neu-Isenburg la S6 ti porta verso il nodo principale.</span></div></div>
+            <div class="step"><div class="num">4</div><div><b>Hbf → Stadion</b><span>S7/S8/S9. Il sito dello stadio indica circa 6 min di treno + 10–15 min a piedi; treni rinforzati.</span></div></div>
+          </div></div>
+          <div class="card"><h3>Evita l'errore classico</h3><p>Il sito evento annuncia anche tram 20/21 e bus 80, ma nello stesso weekend ci sono lavori a Friedensbrücke che modificano proprio la 21. Per questo, come dorsale principale sceglierei <b>S-Bahn via Hbf</b>; tram solo se RMVgo quel giorno la dà regolare.</p><div class="alert red" style="margin-top:10px"><b>Borse:</b> max DIN A4 (21 × 29,7 cm). Meglio senza zaino. Niente bottiglie; eccezione indicata dallo stadio: 1 Tetra Pak analcolico chiuso max 0,5 L. Powerbank consentita solo piccola, max 100 g.</div></div></div>
+          <div class="actions"><a class="primary" href="https://www.google.com/maps/search/?api=1&query=Deutsche+Bank+Park+Frankfurt" target="_blank" rel="noopener">Stadio su Maps</a><a href="https://www.deutschebankpark.de/news/max-korzh-aktuelle-besucherinformationen-179614/" target="_blank" rel="noopener">Info ufficiali Max Korzh</a></div>
+        </div>
+      </section>
+
+      <section class="slide" data-day="sab" data-label="Dopo concerto">
+        <div class="hero emojiHero"><span>🌃</span><div class="heroText"><div class="kicker">Sabato · dopo lo show</div><h2>Non tornare subito a casa</h2><p>Con tutta quella gente in città, ha senso continuare la serata e lasciare smaltire la folla.</p></div></div>
+        <div class="body"><div class="chips"><span class="chip hot">uscita stadio lenta</span><span class="chip good">n71 per rientro tardi</span><span class="chip blue">weekend: S-Bahn notturna su varie linee</span></div>
+          <div class="grid"><div class="card"><h3>Piano A: centro / Sachsenhausen</h3><p>Dallo stadio prendi la prima soluzione utile verso <b>Hauptbahnhof</b> (S7/S8/S9). Da lì puoi andare in centro, oppure puntare a Sachsenhausen. Non fissare una coincidenza precisa: l'orario di fine concerto non è ufficializzato e l'uscita di decine di migliaia di persone può rallentare tutto.</p></div><div class="card"><h3>Rientro quando vuoi</h3><p>Per tornare a Neu-Isenburg a notte inoltrata, il riferimento è il <b>night bus n71 Frankfurt → Neu-Isenburg → Langen → Darmstadt</b>, attivo nel sistema notturno RMV. Da Alt-Sachsenhausen è comodo intercettarlo a Lokalbahnhof/Wendelsplatz; dal centro a Konstablerwache.</p><div class="alert" style="margin-top:10px">Non attraversare da solo scorciatoie nel Stadtwald a notte fonda solo perché casa e stadio sembrano vicini sulla mappa. Dopo il concerto usa trasporto pubblico o taxi/rideshare.</div></div></div>
+        </div>
+      </section>
+
+      <section class="slide" data-day="mezzi" data-label="Trasporti">
+        <div class="hero emojiHero"><span>🚆</span><div class="heroText"><div class="kicker">Salva questa slide</div><h2>Trasporti: la tua cheat sheet</h2><p>Le linee che ti servono davvero, senza imparare tutta la rete.</p></div></div>
+        <div class="body"><div class="grid">
+          <div class="card"><h3>Vicino a casa</h3><p><b>Fermata Friedrichstraße</b>: 653, OF-52, OF-91, OF-92, V92. La stazione <b>Neu-Isenburg Bahnhof</b> ti serve per S6. La fermata tram <b>Neu-Isenburg Stadtgrenze</b> esiste, ma durante il tuo weekend il tram 17 è modificato/spezzato dai lavori.</p></div>
+          <div class="card"><h3>Le 6 linee da ricordare</h3><div class="steps"><div class="step"><div class="num">653</div><div><b>Casa ↔ Frankfurt Südbahnhof</b><span>La più pratica nel quotidiano.</span></div></div><div class="step"><div class="num">S6</div><div><b>Neu-Isenburg Bahnhof ↔ Frankfurt</b><span>Utile per Hbf e rete ferroviaria.</span></div></div><div class="step"><div class="num">47</div><div><b>Südbahnhof ↔ Goetheturm</b><span>Con la 48 fa il circuito del punto panoramico.</span></div></div><div class="step"><div class="num">S8</div><div><b>Stadion / Hbf / aeroporto</b><span>Una delle linee chiave durante il weekend.</span></div></div><div class="step"><div class="num">n71</div><div><b>Notte Frankfurt → Neu-Isenburg</b><span>La linea più importante quando fai tardi.</span></div></div><div class="step"><div class="num">X17</div><div><b>FRA ↔ Neu-Isenburg</b><span>Express bus aeroporto; anche X19 serve la relazione aeroporto–Neu-Isenburg.</span></div></div></div></div>
+        </div><div class="alert" style="margin-top:12px"><b>Lavori 5–12 ottobre:</b> interessano tram 12, 15, 17, 18 e 21. Dal 9 al 12 ottobre la fase 2 interrompe alcune tratte a Friedensbrücke e spezza la 17; la 21 è limitata tra Stadion e Universitätsklinikum. RMVgo è obbligatoria prima di partire.</div>
+        <div class="actions"><a class="primary" href="https://www.rmv.de/" target="_blank" rel="noopener">RMV ufficiale</a><a href="https://www.traffiq.de/traffiq/medien/presse-informationen/presse-information/bauarbeiten-an-der-haltestelle-friedensbruecke.html" target="_blank" rel="noopener">Lavori Friedensbrücke</a></div>
+        </div>
+      </section>
+
+      <section class="slide" data-day="mezzi" data-label="Biglietti">
+        <div class="hero emojiHero"><span>🎟️</span><div class="heroText"><div class="kicker">Biglietti RMV</div><h2>Non comprare il ticket sbagliato</h2><p>Neu-Isenburg non è la stessa zona tariffaria del solo centro di Frankfurt.</p></div></div>
+        <div class="body"><div class="grid"><div class="card"><h3>Per girare dentro Frankfurt</h3><p>Nel 2026 la <b>day ticket Frankfurt città</b> costa €7,75 e il biglietto singolo €3,80, ma valgono per la zona urbana Frankfurt (5000) e <b>non coprono automaticamente la tua base a Neu-Isenburg</b>.</p></div><div class="card"><h3>La scelta sicura</h3><p>Inserisci ogni viaggio in <b>RMVgo</b> partendo dalla fermata reale vicino casa: l'app calcola il livello tariffario corretto. Se fai più tratte nello stesso giorno, confronta il Tageskarte proposto con i singoli.</p><div class="mini" style="margin-top:9px">La day ticket RMV, quando valida per le zone acquistate, comprende anche i servizi notturni ed è valida fino alle 05:00 del giorno successivo.</div></div></div>
+        </div>
+      </section>
+
+      <section class="slide" data-day="dom" data-label="Domenica">
+        <div class="hero emojiHero"><span>✈️</span><div class="heroText"><div class="kicker">Domenica 11 ottobre</div><h2>Recupero + rientro</h2><p>Niente programma rigido finché non hai fissato l'orario del volo.</p></div></div>
+        <div class="body"><div class="grid"><div class="card"><h3>Se hai mezza giornata</h3><p>Scegli una sola cosa che hai saltato: <b>Palmengarten</b>, passeggiata sul Main oppure brunch in Sachsenhausen. Evita di metterti lontano dalla direttrice per l'aeroporto.</p></div><div class="card"><h3>Verso FRA</h3><p>Da Neu-Isenburg ci sono collegamenti express bus <b>X17/X19</b> verso l'aeroporto. In alternativa vai verso Frankfurt e prendi S8/S9. Per un volo internazionale io terrei margine extra: la domenica dopo un grande concerto può esserci più movimento del normale.</p></div></div><div class="alert" style="margin-top:12px">Se invece il tuo biglietto dice <b>HHN (Frankfurt-Hahn)</b>, questa parte non vale: è un altro aeroporto, molto più lontano. Controlla il codice aeroportuale.</div></div>
+      </section>
+
+      <section class="slide" data-day="mezzi" data-label="Checklist">
+        <div class="hero emojiHero"><span>✅</span><div class="heroText"><div class="kicker">Prima di uscire</div><h2>Checklist anti-problemi</h2><p>30 secondi che ti evitano ore perse.</p></div></div>
+        <div class="body"><div class="grid"><div class="card"><h3>Ogni giorno</h3><label><input type="checkbox"> RMVgo installata e viaggio controllato</label><br><br><label><input type="checkbox"> Batteria almeno 60%</label><br><br><label><input type="checkbox"> Powerbank piccola</label><br><br><label><input type="checkbox"> Screenshot indirizzo di casa + coordinate</label><br><br><label><input type="checkbox"> Carta + un po' di contanti</label></div><div class="card"><h3>Sabato concerto</h3><label><input type="checkbox"> Ticket salvato offline</label><br><br><label><input type="checkbox"> Borsa non oltre A4</label><br><br><label><input type="checkbox"> Niente bottiglie / spray / selfie stick</label><br><br><label><input type="checkbox"> Ingresso E1–E5 verificato sul ticket/info evento</label><br><br><label><input type="checkbox"> Piano B per il rientro: n71 / taxi</label></div></div></div>
+      </section>
+
+    </div>
+  </div>
+
+  <div class="nav"><button id="prev" aria-label="Slide precedente">‹</button><div><div class="progressWrap"><div class="progress" id="progress"></div></div><div class="counter" id="counter"></div><div class="dots" id="dots"></div></div><button id="next" aria-label="Slide successiva">›</button></div>
+  <div class="quick" id="quick"></div>
+
+  <div class="footer"><b>Nota:</b> orari e modifiche trasporto sono quelli pubblicati per ottobre 2026. Per partenze reali usa RMVgo il giorno stesso: lavori, evento e gestione folla possono cambiare l'operatività in tempo reale.
+    <div class="sources"><a href="https://www.deutschebankpark.de/news/max-korzh-aktuelle-besucherinformationen-179614/" target="_blank" rel="noopener">Deutsche Bank Park</a><a href="https://www.rmv.de/" target="_blank" rel="noopener">RMV</a><a href="https://www.traffiq.de/traffiq/medien/presse-informationen/presse-information/bauarbeiten-an-der-haltestelle-friedensbruecke.html" target="_blank" rel="noopener">traffiQ lavori</a><a href="https://frankfurt.de/themen/umwelt-und-gruen/orte/wald/goetheturm" target="_blank" rel="noopener">Goetheturm</a><a href="https://www.maintower.de/en/" target="_blank" rel="noopener">MAIN TOWER</a></div>
+  </div>
+</div>
+<script>
+(()=>{
+  const root=document.getElementById('app'), track=document.getElementById('track'), all=[...track.children], prev=document.getElementById('prev'), next=document.getElementById('next'), progress=document.getElementById('progress'), counter=document.getElementById('counter'), dots=document.getElementById('dots'), quick=document.getElementById('quick');
+  let filter='all', visible=all.slice(), idx=0, x0=null;
+  const icons={Piano:'🧭',Goetheturm:'🌲',Römerberg:'🏛️','Eiserner Steg':'🌉','Main Tower':'🏙️',Centro:'🛍️',Sachsenhausen:'🍻',Concerto:'🔥','Dopo concerto':'🌃',Trasporti:'🚆',Biglietti:'🎟️',Domenica:'✈️',Checklist:'✅'};
+  function rebuild(){
+    visible=all.filter(s=>filter==='all'||s.dataset.day===filter||s.dataset.day==='all');
+    all.forEach(s=>s.style.display=visible.includes(s)?'flex':'none'); idx=0; render();
+  }
+  function render(){
+    let before=0; for(const s of all){ if(s===visible[idx]) break; if(s.style.display!=='none') before++; }
+    const target=all.indexOf(visible[idx]); track.style.transform=`translateX(-${target*100}%)`;
+    // hidden slides still occupy no width; compute visible index via CSS order workaround by assigning absolute transform based on visible order
+    visible.forEach((s,i)=>s.style.order=i); all.filter(s=>!visible.includes(s)).forEach(s=>s.style.order=999);
+    track.style.transform=`translateX(-${idx*100}%)`;
+    counter.textContent=`${idx+1} / ${visible.length} · ${visible[idx]?.dataset.label||''}`;
+    progress.style.width=`${((idx+1)/visible.length)*100}%`;
+    dots.innerHTML=''; visible.forEach((s,i)=>{const b=document.createElement('button');b.className='dot'+(i===idx?' active':'');b.setAttribute('aria-label','Vai a '+s.dataset.label);b.addEventListener('click',()=>{idx=i;render()});dots.appendChild(b)});
+    quick.innerHTML=''; visible.slice(0,8).forEach((s,i)=>{const b=document.createElement('button');b.className=i===idx?'active':'';b.innerHTML=`<strong>${icons[s.dataset.label]||'•'}</strong>${s.dataset.label}`;b.addEventListener('click',()=>{idx=i;render()});quick.appendChild(b)});
+    prev.disabled=idx===0; next.disabled=idx===visible.length-1;
+  }
+  prev.addEventListener('click',()=>{if(idx>0){idx--;render()}}); next.addEventListener('click',()=>{if(idx<visible.length-1){idx++;render()}});
+  root.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{root.querySelectorAll('[data-filter]').forEach(x=>x.classList.remove('active'));b.classList.add('active');filter=b.dataset.filter;rebuild()}));
+  root.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName))return;if(e.key==='ArrowRight'&&idx<visible.length-1){idx++;render()}if(e.key==='ArrowLeft'&&idx>0){idx--;render()}});
+  track.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true}); track.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(dx)<45)return;if(dx<0&&idx<visible.length-1)idx++;if(dx>0&&idx>0)idx--;render()},{passive:true});
+  rebuild();
+})();
+</script>
+</body>
+</html>
